@@ -1,19 +1,21 @@
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let value = 7;
+let arr = [12, 23, 45, 67, 11, 18, 90, 18, 23, 7, 52];
+let value = 12;
 
-function li(array, value) {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] === value) {
-            return true;
+function search(arr, value) {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == value) {
+            return i;
         }
     }
-    return false;
-}
-let data = li(array, value);
+    return false
 
-if (data === true) {
-    console.log("element is exist in array");
+}
+let data = search(arr, value);
+
+if (data === false) {
+    console.log("element is not exist");
 }
 else {
-    console.log("element is not exist in array");
+    console.log("the element is present in the array index = " + data);
 }
